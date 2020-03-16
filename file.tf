@@ -1,5 +1,5 @@
 module "vote_service_sg" {
-  source = "./terraform-aws-security-group"
+  source = "./terraform-aws-sg"
 
   name        = "user-service"
   description = "Security group for user-service with custom ports open within VPC, and PostgreSQL publicly open"

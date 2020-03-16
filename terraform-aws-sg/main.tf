@@ -59,6 +59,7 @@ resource "aws_security_group" "this_name_prefix" {
 # Ingress - List of rules (simple)
 ###################################
 # Security group rules with "cidr_blocks" and it uses list of rules names
+
 resource "aws_security_group_rule" "ingress_rules" {
   count = var.create ? length(var.ingress_rules) : 0
 
