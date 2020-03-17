@@ -23,4 +23,6 @@ module "vote_service_sg" {
       cidr_blocks = "10.20.0.0/16"
     },
   ]
-}
+  egress_cidr_blocks = ["0.0.0.0/0"]
+  egress_rules       = ["all-all"]
+} 

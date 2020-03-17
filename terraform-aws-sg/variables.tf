@@ -1,4 +1,4 @@
-###Pass the variable rules
+###Define the rules variable
 variable "rules" {
   description = "Map of known security group rules (define as 'name' = ['from port', 'to port', 'protocol', 'description'])"
   type        = map(list(any))
@@ -218,13 +218,15 @@ variable "egress_with_source_security_group_id" {
 variable "egress_cidr_blocks" {
   description = "List of IPv4 CIDR ranges to use on all egress rules"
   type        = list(string)
-  default     = ["0.0.0.0/0"]
+ #default     = ["0.0.0.0/0"]
+  default     = [] 
 }
 
 variable "egress_ipv6_cidr_blocks" {
   description = "List of IPv6 CIDR ranges to use on all egress rules"
   type        = list(string)
-  default     = ["::/0"]
+ #default     = ["::/0"]
+  default     = []
 }
 
 variable "egress_prefix_list_ids" {
